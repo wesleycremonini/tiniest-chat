@@ -25,7 +25,7 @@ func main() {
 				}
 				for connNick, conn := range conns {
 					if connNick != nickInt.String() {
-						conn.Write([]uint8(nickInt.String() + ": " + string(line[:len(line)-1]) + "\r\n"))
+						conn.Write([]uint8(nickInt.String() + ": " + string(line)))
 					}
 				}
 			}
